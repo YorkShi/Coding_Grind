@@ -20,3 +20,9 @@ isMatch("aa", ".*") → true
 isMatch("ab", ".*") → true
 isMatch("aab", "c*a*b") → true
 */
+
+public class regularMatching{
+    public boolean isMatch(String s, String p) {
+
+    }
+}
