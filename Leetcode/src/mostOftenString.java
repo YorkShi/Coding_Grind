@@ -1,4 +1,4 @@
-／* 在一个长度为N的string中，找到出现次数最多的substring出现的次数。 substring限制如下：
+/* 在一个长度为N的string中，找到出现次数最多的substring出现的次数。 substring限制如下：
 1. 长度在K和L之间， 2 <= k < L <= 26
 2. substring当中包含的unique的字符个数不超过M个 2 <= M <= 26
 

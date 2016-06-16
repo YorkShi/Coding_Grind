@@ -3,7 +3,7 @@
 // Example1: x = 123, return 321
 // Example2: x = -123, return -321
 
-public class ReverseInteger {
+public class reverseInteger {
 	public int reverse(int x) {
 		// Note: The Solution object is instantiated only once and is reused by
 		// each test case.

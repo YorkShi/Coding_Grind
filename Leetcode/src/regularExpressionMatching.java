@@ -21,7 +21,7 @@ isMatch("ab", ".*") → true
 isMatch("aab", "c*a*b") → true
 */
 
-public class regularMatching{
+public class regularExpressionMatching{
     public boolean isMatch(String s, String p) {
 
     }

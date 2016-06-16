@@ -2,7 +2,7 @@
 // 如果小偷同时偷窃了两个直接相邻的房子，就会触发警报器。
 // 在不触发警报器的情况下，求小偷可以抢到的最多的money。
 
-public class Solution {
+public class robber {
     public int rob(int[] nums) {
         if (nums.length == 0) {
             return 0;

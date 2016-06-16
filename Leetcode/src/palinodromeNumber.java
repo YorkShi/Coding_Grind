@@ -19,7 +19,8 @@ How would you handle such case?
 There is a more generic way of solving this problem.
 */
 
-public class Solution {
+public class palinodromeNumber{
+
     public boolean isPalindrome(int x) {
 
     }

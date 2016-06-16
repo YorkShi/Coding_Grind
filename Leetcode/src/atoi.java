@@ -9,8 +9,4 @@ Notes: It is intended for this problem to be specified vaguely
 (ie, no given input specs). You are responsible to gather all the
 input requirements up front.
 */
-public class Solution {
-    public int myAtoi(String str) {
 
-    }
-}

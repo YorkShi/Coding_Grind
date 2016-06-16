@@ -12,9 +12,11 @@ return [0, 1].
 UPDATE (2016/2/13):
 The return format had been changed to zero-based indices. Please read the above updated description carefully.
 */
-public class Solution {
+
+public class twoSum {
     
     public int[] twoSum(int[] nums, int target) {
+
         int index1 = 0;
         int index2 = 0;
         int sum = 0;
@@ -34,3 +36,4 @@ public class Solution {
     return res;
     }
 }
+

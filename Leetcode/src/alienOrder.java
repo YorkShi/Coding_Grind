@@ -13,6 +13,9 @@ Example：
 ]
 正确顺序是”wertf”。
  */
+package arraylist;
+
+import java.util.ArrayList;
 
 public class alienOrder {
     public class Node {

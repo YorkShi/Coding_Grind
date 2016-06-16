@@ -6,7 +6,7 @@ Example：
 输出答案3，最长包含最多2个不同字符的子串为”ece”
 */
 
-public class Solution {
+public class longestSubstring {
     /**
      * @param s : A string
      * @return : The length of the longest substring
