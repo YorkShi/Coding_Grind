@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b60df16-f067-434c-a2be-e64e7614064b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/test.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../test/testModule/src/twoSum.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/1. Two Sum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/2.AddTwoNumber.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/testModule/src/twoSum.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../test/testModule/testModule.iml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/alienOrder.java" afterPath="$PROJECT_DIR$/src/alienOrder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/atoi.java" afterPath="$PROJECT_DIR$/src/atoi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/longestSubstring.java" afterPath="$PROJECT_DIR$/src/longestSubstring.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mostOftenString.java" afterPath="$PROJECT_DIR$/src/mostOftenString.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/palinodromeNumber.java" afterPath="$PROJECT_DIR$/src/palinodromeNumber.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/regularExpressionMatching.java" afterPath="$PROJECT_DIR$/src/regularExpressionMatching.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reverseInteger.java" afterPath="$PROJECT_DIR$/src/reverseInteger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/robber.java" afterPath="$PROJECT_DIR$/src/robber.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/.idea/modules.xml" afterPath="$PROJECT_DIR$/../test/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../test/.idea/workspace.xml" />
     </list>
     <ignored path="Leecode_Question.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +31,7 @@
       <file leaf-file-name="lengthOfLongestSubstring.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lengthOfLongestSubstring.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20454545">
+            <state vertical-scroll-proportion="-1.0454545">
               <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="58" selection-end-column="5" />
               <folding>
                 <element signature="e#0#1974#0" expanded="true" />
@@ -157,20 +142,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Leetcode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Leecode_Question" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Leetcode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -530,7 +501,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="748" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="748" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -543,7 +514,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -782,7 +753,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lengthOfLongestSubstring.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20454545">
+        <state vertical-scroll-proportion="-1.0454545">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="58" selection-end-column="5" />
           <folding>
             <element signature="e#0#1974#0" expanded="true" />
