@@ -25,13 +25,14 @@ def longest_pal(str):
     for sil in range(2, n + 1):
         for i in range(n - sil + 1):
             j = i + sil - 1
-           if (str[i] == str[j]):
-               Opt[i][j] = Opt[i + 1][j - 1] + 2;
-           else:
-               Opt[i][j] = max(Opt[i][j - 1], Opt[i + 1][j])
+            if str[i] == str[j]:
+                Opt[i][j] = Opt[i + 1][j - 1] + 2
+            else:
+                Opt[i][j] = max(Opt[i][j - 1], Opt[i + 1][j])
 
-        return Opt[0][n - 1]
+    for i in range(len(Opt)):
+        print(Opt[i])
 
-str1 = "a man two cats a crazy plan aibohphobia and a canal in panama"
-print str1, "has longest palindrome subsequence length"
-print longest_pal(str1)
+    return Opt[0][n-1]
+
+print(longest_pal("BABABABABA"))

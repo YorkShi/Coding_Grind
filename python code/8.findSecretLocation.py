@@ -8,10 +8,10 @@ def findSecretLocation(x1,x2,y1,y2):
             return x1,y1;
         elif x1 != x2 or y1 != y2:
 
-            a1 = findSecretLocation(x1,(x1+x2)//2, y1,(y1+y2)//2)
-            a2 = findSecretLocation(x1,(x1+x2)//2, (y1+y2)//2+1, y2)
-            a3 = findSecretLocation((x1+x2)//2+1, x2, y1,(y1+y2)//2)
-            a4 = findSecretLocation((x1+x2)//2+1, x2, (y1+y2)//2+1, y2)
+            findSecretLocation(x1,(x1+x2)//2, y1,(y1+y2)//2)
+            findSecretLocation(x1,(x1+x2)//2, (y1+y2)//2+1, y2)
+            findSecretLocation((x1+x2)//2+1, x2, y1,(y1+y2)//2)
+            findSecretLocation((x1+x2)//2+1, x2, (y1+y2)//2+1, y2)
             
         else:
             return (-1, -1)

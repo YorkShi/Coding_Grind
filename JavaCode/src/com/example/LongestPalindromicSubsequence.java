@@ -5,8 +5,8 @@ package com.example;
  */
 public class LongestPalindromicSubsequence {
     public int findPalindrome(String A){
-        char [] chars = A.toCharArray();  //Convery string to character array..
-        int [][]LP = new int[chars.length][chars.length];
+        char[] chars = A.toCharArray();  //Convery string to character array..
+        int[][]LP = new int[chars.length][chars.length];
         //LP[i][j] - length of palindrome from ith index to jth index
         // all the characters in the string are palindrome by itself of length 1.
         //So all LP[i][i] =  1
@@ -42,7 +42,7 @@ public class LongestPalindromicSubsequence {
     }
 
     public static void main(String arg[]){
-        String strA = "BBBB";
+        String strA = "BBABCBABA";
         LongestPalindromicSubsequence i = new LongestPalindromicSubsequence();
         int x = i.findPalindrome(strA);
         System.out.println("Length of Longest Palindrome in '" + strA + "' is- " + x);
