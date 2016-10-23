@@ -6,4 +6,4 @@ Java would be my first choice for programming language and later I may upload so
 
 Update: There would be also some algorithm problem from 九章算法 
 
-For any concerns or questions, feel free to contact me via Github or my email: youngforyou520@gmail.com
+For any concerns or questions, feel free to contact me via Github or my email: yuanj.shi@hotmail.com
