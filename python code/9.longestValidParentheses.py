@@ -21,7 +21,6 @@ def longestValidParentheses(str):
         # we compute Opt table entry for each sil length and
         # starting index i
 
-
     for sil in range(2, n + 1):
         for i in range(n - sil + 1):
             j = i + sil - 1
