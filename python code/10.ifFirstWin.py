@@ -12,7 +12,7 @@ def firstWin(x):
                 sum[i][j] = sum[i][j-1] + x[j]
 
     for i in range(n):
-        largest[i][i] = x[i]
+        largest[i] = x[i]
 
     for i in range(n-1):
         for j in range(n-1):
