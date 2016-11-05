@@ -12,8 +12,10 @@ def firstWin(x):
     temp = 0
     for i in range(1,n):
         temp = largest[n-i]
-        for j in range(n-1):
-            largest[i][j] = max(x[j] + sum[i][j-1] - largest[i][j-1], x[i] + sum[i+1][j] - largest[i + 1][j])
+        for j in range(n-i-1,0):
+            temp2 = largest[j]
+            largest[i] = max(x[j] + sum[i + j +1] - sum[i-1]- temp, x[i+j] + sum[i + j] - sum[i] - largest[i])
+            temp = temp2
 
     return largest
 
