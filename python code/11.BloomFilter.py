@@ -14,8 +14,9 @@ class BloomFilter:
         for line in lines:
             result1 = self.hash(line, 1)
             result2 = self.hash(line, 2)
-            self.bit_array[result1] = 1
-            self.bit_array[result2] = 1
+            self.bit_array[result1-1] = 1
+            self.bit_array[result2-1] = 1
+            print(line)
             print(self.bit_array)
 
     def hash(self, string, hashCount):
@@ -85,6 +86,8 @@ class BloomFilter:
     def lookup(self, string):
         result1 = self.hash(string, 1)
         result2 = self.hash(string, 2)
+        print(result1)
+        print(result2)
         if self.bit_array[result1] == 0 or self.bit_array[result2] == 0:
             return "Nope"
         return "Probably"
@@ -94,5 +97,5 @@ test = BloomFilter(23,2)
 
 test.add()
 
-test.lookup("xda")
+print(test.lookup("xda"))
 
