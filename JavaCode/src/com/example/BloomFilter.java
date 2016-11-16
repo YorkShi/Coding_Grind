@@ -1,6 +1,8 @@
 /**
  * Created by 13104584d on 16/11/2016.
  */
+package com.example;
+import java.io.*;
 public class BloomFilter {
     private String[] lines;
     private int size;
@@ -8,10 +10,37 @@ public class BloomFilter {
     private int hashCount;
 
     public static void main(String [] args){
-        String [] lines = {"bug", "straw", "megabyte", "compilation", "video", "socialist", "radius", "appreciation", "chestnut"};
-        BloomFilter test = new BloomFilter(lines, 23,2);
-        test.add();
-        test.lookUp("China");
+        int size = Integer.parseInt(args[0]);
+        String documentName = args[1];
+        String testName = args[2];
+        int i = 0;
+        int j = 0;
+        try {
+            BufferedReader fileIn = new BufferedReader(new FileReader(documentName));
+            BufferedReader fileIn2 = new BufferedReader(new FileReader(testName));
+
+            int documentSize = Integer.parseInt(fileIn.readLine());
+            int testSize = Integer.parseInt(fileIn2.readLine());
+            String [] lines = new String [documentSize];
+            String [] tests = new String [testSize];
+            while(fileIn.readLine() != null){
+                lines[i] = fileIn.readLine(); // Reads one line from the file
+                i++;
+            }
+            while(fileIn2.readLine() != null){
+                tests[j] = fileIn2.readLine(); // Reads one line from the file
+                j++;
+            }
+            fileIn.close();
+            fileIn2.close();
+            BloomFilter BloomFilter = new BloomFilter(lines, size, 2);
+            BloomFilter.add();
+            for(int k = 0; k < tests.length; k++){
+                BloomFilter.lookUp(tests[k]);
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     public BloomFilter(String[] lines, int size, int hashCount){
@@ -37,10 +66,10 @@ public class BloomFilter {
             result[(int) result1 - 1] = 1;
             result[(int) result2 - 1] = 1;
 
-            System.out.println(lines[i]);
-            for (int j = 0; j < this.size; j++)
+            //System.out.println(lines[i]);
+            /*for (int j = 0; j < this.size; j++)
                 System.out.print(result[j]);
-            System.out.println();
+            System.out.println();*/
         }
     }
 
@@ -59,6 +88,6 @@ public class BloomFilter {
     public void lookUp(String string){
         double result1 = this.hash(string,1);
         double result2 = this.hash(string,2);
-        System.out.println((this.result[(int) result1 - 1 ] == 1 && this.result[(int) result2 - 1] == 1) ? true:false);
+        System.out.println((this.result[(int) result1 - 1 ] == 1 && this.result[(int) result2 - 1] == 1) ? "Probably":"Np");
     }
 }
