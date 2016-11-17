@@ -3,11 +3,14 @@
  */
 package com.example;
 import java.io.*;
+import java.math.*;
 public class BloomFilter {
     private String[] lines;
     private int size;
     private int [] result;
     private int hashCount;
+    private static final Long INIT32  = Long.parseLong("811c9dc5", 16);
+    private static final Long PRIME32 = Long.parseLong("01000193", 16);
 
     public static void main(String [] args){
         int size = Integer.parseInt(args[0]);
@@ -35,9 +38,9 @@ public class BloomFilter {
             fileIn2.close();
             BloomFilter BloomFilter = new BloomFilter(lines, size, 2);
             BloomFilter.add();
-            for(int k = 0; k < tests.length; k++){
-                BloomFilter.lookUp(tests[k]);
-            }
+            //for(int k = 0; k < tests.length; k++){
+                System.out.println(BloomFilter.lookUp(tests[0]));
+            //}
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -60,37 +63,50 @@ public class BloomFilter {
         int result1;
         int result2;
         for(int i = 0; i < this.lines.length; i++){
-            result1 = (int) this.hash(lines[i], 1) - 1;
-            result2 = (int) this.hash(lines[i], 2) - 1;
+            result1 = Math.abs((int) this.fnv1_32(lines[i]));
+            result2 = (int) this.hash(lines[i]);
             //System.out.println(result1);
             //System.out.println(result2);
-            result[result1] = 1;
-            result[result2] = 1;
+            if(result1 != 0)
+                result[result1 - 1] = 1;
+            if(result2 != 0)
+                result[result2 - 1] = 1;
 
-            System.out.println(lines[i]);
+            //System.out.println(lines[i]);
             /*for (int j = 0; j < this.size; j++)
                 System.out.print(result[j]);
             System.out.println();*/
         }
     }
 
-    public double FNV(){
-        return something;
+    public double fnv1_32(String input) {
+        Long hash = INIT32;
+        char[] data = new char [input.length()];
+        for(int i = 0; i < input.length(); i++)
+            data[i] = input.charAt(i);
+        for (char b : data) {
+            hash = hash*(PRIME32);
+            hash = hash^b;
+        }
+        if(hash < 0) ;
+        return (double) hash % Long.parseLong("100", 10);
     }
 
-    public double hash(String string, int hashcount){
+    public double hash(String string){
         double temp = 0;
         for(int i = 0; i < string.length(); i++) {
-            temp += (string.charAt(i) - 96) * Math.pow(3, hashcount + i + 1);
+            temp += (string.charAt(i) - 96) * Math.pow(2, 3 + 3*i);
             //System.out.println(temp);
         }
         return (temp % this.size);
     }
 
 
-    public void lookUp(String string){
-        double result1 = this.hash(string,1);
-        double result2 = this.hash(string,2);
-        System.out.println((this.result[(int) result1 - 1 ] == 1 && this.result[(int) result2 - 1] == 1) ? "Probably":"No");
+    public String lookUp(String string){
+        double result1 = Math.abs(100 + this.fnv1_32(string));
+        double result2 = Math.abs(this.hash(string));
+        if(result1 == 0 || result2 == 0)
+            return "No";
+        return (this.result[(int) result1 - 1 ] == 1 && this.result[(int) result2 - 1] == 1) ? "Probably":"No";
     }
 }
