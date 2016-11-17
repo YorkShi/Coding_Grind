@@ -23,11 +23,11 @@ public class BloomFilter {
             int testSize = Integer.parseInt(fileIn2.readLine());
             String [] lines = new String [documentSize];
             String [] tests = new String [testSize];
-            while(fileIn.readLine() != null){
+            for(; i < documentSize;){
                 lines[i] = fileIn.readLine(); // Reads one line from the file
                 i++;
             }
-            while(fileIn2.readLine() != null){
+            for(; j < testSize;){
                 tests[j] = fileIn2.readLine(); // Reads one line from the file
                 j++;
             }
@@ -50,37 +50,40 @@ public class BloomFilter {
         this.result = new int [size];
         for (int i = 0; i < size; i++){
             result[i] = 0;
+            //System.out.print(result[i]);
         }
 
     }
 
     public void add(){
         //result = new int [hashCount];
-        double result1;
-        double result2;
+        int result1;
+        int result2;
         for(int i = 0; i < this.lines.length; i++){
-            result1 = this.hash(lines[i], 1);
-            result2 = this.hash(lines[i], 2);
+            result1 = (int) this.hash(lines[i], 1) - 1;
+            result2 = (int) this.hash(lines[i], 2) - 1;
             //System.out.println(result1);
             //System.out.println(result2);
-            result[(int) result1 - 1] = 1;
-            result[(int) result2 - 1] = 1;
+            result[result1] = 1;
+            result[result2] = 1;
 
-            //System.out.println(lines[i]);
+            System.out.println(lines[i]);
             /*for (int j = 0; j < this.size; j++)
                 System.out.print(result[j]);
             System.out.println();*/
         }
     }
 
+    public double FNV(){
+        return something;
+    }
+
     public double hash(String string, int hashcount){
         double temp = 0;
-       // int temp2 = 0;
         for(int i = 0; i < string.length(); i++) {
-            temp += ((double) string.charAt(i) - 96) * Math.pow(3, hashcount + i + 1);
+            temp += (string.charAt(i) - 96) * Math.pow(3, hashcount + i + 1);
             //System.out.println(temp);
         }
-
         return (temp % this.size);
     }
 
@@ -88,6 +91,6 @@ public class BloomFilter {
     public void lookUp(String string){
         double result1 = this.hash(string,1);
         double result2 = this.hash(string,2);
-        System.out.println((this.result[(int) result1 - 1 ] == 1 && this.result[(int) result2 - 1] == 1) ? "Probably":"Np");
+        System.out.println((this.result[(int) result1 - 1 ] == 1 && this.result[(int) result2 - 1] == 1) ? "Probably":"No");
     }
 }
