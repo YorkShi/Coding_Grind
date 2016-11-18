@@ -38,9 +38,9 @@ public class BloomFilter {
             fileIn2.close();
             BloomFilter BloomFilter = new BloomFilter(lines, size, 2);
             BloomFilter.add();
-            //for(int k = 0; k < tests.length; k++){
-                System.out.println(BloomFilter.lookUp(tests[0]));
-            //}
+            for(int k = 0; k < tests.length; k++){
+                System.out.println(BloomFilter.lookUp(tests[k]));
+            }
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -63,20 +63,17 @@ public class BloomFilter {
         int result1;
         int result2;
         for(int i = 0; i < this.lines.length; i++){
-            result1 = Math.abs((int) this.fnv1_32(lines[i]));
+            result1 = (int) this.fnv1_32(lines[i]);
             result2 = (int) this.hash(lines[i]);
-            //System.out.println(result1);
-            //System.out.println(result2);
-            if(result1 != 0)
-                result[result1 - 1] = 1;
-            if(result2 != 0)
-                result[result2 - 1] = 1;
-
+            System.out.print(result1+",");
+            System.out.println(result2);
+            result[result1] = 1;
+            result[result2] = 1;
             //System.out.println(lines[i]);
-            /*for (int j = 0; j < this.size; j++)
-                System.out.print(result[j]);
-            System.out.println();*/
         }
+        for (int j = 0; j < this.size; j++)
+            System.out.print(result[j]+",");
+        System.out.println();
     }
 
     public double fnv1_32(String input) {
@@ -88,8 +85,10 @@ public class BloomFilter {
             hash = hash*(PRIME32);
             hash = hash^b;
         }
-        if(hash < 0) ;
-        return (double) hash % Long.parseLong("100", 10);
+        float temp =  hash % Long.parseLong("100", 10);
+        if(temp < 0)
+            temp += 100;
+        return temp;
     }
 
     public double hash(String string){
@@ -103,10 +102,17 @@ public class BloomFilter {
 
 
     public String lookUp(String string){
-        double result1 = Math.abs(100 + this.fnv1_32(string));
-        double result2 = Math.abs(this.hash(string));
-        if(result1 == 0 || result2 == 0)
-            return "No";
-        return (this.result[(int) result1 - 1 ] == 1 && this.result[(int) result2 - 1] == 1) ? "Probably":"No";
+        double result1 = this.fnv1_32(string);
+        double result2 = this.hash(string);
+        System.out.printf(result1+",");
+        System.out.println(result2);
+        double setBitCount = 0;
+        for (int i = 0; i < this.size; i++)
+            if(this.result[i] == 1){
+                setBitCount += 1;
+            }
+        double prob = Math.round(Math.pow(setBitCount/100,2) * 100);
+
+        return (this.result[(int) result1] == 1 && this.result[(int) result2] == 1) ? "Maybe "+prob+"%":"No";
     }
 }
