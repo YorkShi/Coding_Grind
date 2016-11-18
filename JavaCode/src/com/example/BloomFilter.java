@@ -8,7 +8,6 @@ public class BloomFilter {
     private String[] lines;
     private int size;
     private int [] result;
-    private int hashCount;
     private static final Long INIT32  = Long.parseLong("811c9dc5", 16);
     private static final Long PRIME32 = Long.parseLong("01000193", 16);
 
@@ -36,7 +35,7 @@ public class BloomFilter {
             }
             fileIn.close();
             fileIn2.close();
-            BloomFilter BloomFilter = new BloomFilter(lines, size, 2);
+            BloomFilter BloomFilter = new BloomFilter(lines, size);
             BloomFilter.add();
             for(int k = 0; k < tests.length; k++){
                 System.out.println(BloomFilter.lookUp(tests[k]));
@@ -46,9 +45,8 @@ public class BloomFilter {
         }
     }
 
-    public BloomFilter(String[] lines, int size, int hashCount){
+    public BloomFilter(String[] lines, int size){
         this.lines = lines;
-        this.hashCount = hashCount;
         this.size = size;
         this.result = new int [size];
         for (int i = 0; i < size; i++){
@@ -59,16 +57,15 @@ public class BloomFilter {
     }
 
     public void add(){
-        //result = new int [hashCount];
-        int result1;
-        int result2;
+        double result1;
+        double result2;
         for(int i = 0; i < this.lines.length; i++){
-            result1 = (int) this.fnv1_32(lines[i]);
-            result2 = (int) this.hash(lines[i]);
+            result1 = this.fnv1_32(lines[i]);
+            result2 = this.hash(lines[i]);
             System.out.print(result1+",");
             System.out.println(result2);
-            result[result1] = 1;
-            result[result2] = 1;
+            result[(int)result1] = 1;
+            result[(int)result2] = 1;
             //System.out.println(lines[i]);
         }
         for (int j = 0; j < this.size; j++)
@@ -85,7 +82,7 @@ public class BloomFilter {
             hash = hash*(PRIME32);
             hash = hash^b;
         }
-        float temp =  hash % Long.parseLong("100", 10);
+        float temp =  hash % new Long(this.size);
         if(temp < 0)
             temp += 100;
         return temp;
