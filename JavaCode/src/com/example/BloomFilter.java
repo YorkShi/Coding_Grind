@@ -8,6 +8,7 @@ public class BloomFilter {
     private String[] lines;
     private int size;
     private int [] result;
+    private double setbitCount;
     private static final Long INIT32  = Long.parseLong("811c9dc5", 16);
     private static final Long PRIME32 = Long.parseLong("01000193", 16);
 
@@ -57,23 +58,29 @@ public class BloomFilter {
     }
 
     public void add(){
-        double result1;
-        double result2;
+        long result1;
+        int result2;
         for(int i = 0; i < this.lines.length; i++){
             result1 = this.fnv1_32(lines[i]);
             result2 = this.hash(lines[i]);
-            System.out.print(result1+",");
-            System.out.println(result2);
+            //System.out.print(result1+",");
+            //System.out.println(result2);
             result[(int)result1] = 1;
-            result[(int)result2] = 1;
+            result[result2] = 1;
             //System.out.println(lines[i]);
         }
         for (int j = 0; j < this.size; j++)
             System.out.print(result[j]+",");
         System.out.println();
+
+        for (int k = 0; k < this.size; k++)
+            if(this.result[k] == 1){
+                this.setbitCount += 1;
+            }
+        System.out.println(this.setbitCount);
     }
 
-    public double fnv1_32(String input) {
+    public Long fnv1_32(String input) {
         Long hash = INIT32;
         char[] data = new char [input.length()];
         for(int i = 0; i < input.length(); i++)
@@ -82,16 +89,16 @@ public class BloomFilter {
             hash = hash*(PRIME32);
             hash = hash^b;
         }
-        float temp =  hash % new Long(this.size);
+        Long temp =  hash % new Long(this.size);
         if(temp < 0)
             temp += 100;
         return temp;
     }
 
-    public double hash(String string){
-        double temp = 0;
+    public int hash(String string){
+        int temp = 0;
         for(int i = 0; i < string.length(); i++) {
-            temp += (string.charAt(i) - 96) * Math.pow(2, 3 + 3*i);
+            temp += Math.pow((string.charAt(i) - 96), 2) * Math.pow(2, 2 + 3*i);
             //System.out.println(temp);
         }
         return (temp % this.size);
@@ -99,17 +106,14 @@ public class BloomFilter {
 
 
     public String lookUp(String string){
-        double result1 = this.fnv1_32(string);
-        double result2 = this.hash(string);
-        System.out.printf(result1+",");
-        System.out.println(result2);
-        double setBitCount = 0;
-        for (int i = 0; i < this.size; i++)
-            if(this.result[i] == 1){
-                setBitCount += 1;
-            }
-        double prob = Math.round(Math.pow(setBitCount/100,2) * 100);
+        long result1 = this.fnv1_32(string);
+        int result2 = this.hash(string);
+        //System.out.printf(result1+",");
+        //System.out.println(result2);
 
-        return (this.result[(int) result1] == 1 && this.result[(int) result2] == 1) ? "Maybe "+prob+"%":"No";
+        //System.out.println(setBitCount);
+        double prob = Math.round(Math.pow(this.setbitCount/100,2) * 100);
+
+        return (this.result[(int) result1] == 1 && this.result[result2] == 1) ? "Maybe "+prob+"%":"No";
     }
 }
