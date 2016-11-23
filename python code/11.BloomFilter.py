@@ -46,5 +46,5 @@ test = BloomFilter(23,2)
 
 test.add()
 
-print(test.lookup("china"))
+print(test.lookup("newyork"))
 
