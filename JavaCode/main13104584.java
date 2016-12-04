@@ -1,10 +1,9 @@
 /**
  * Created by 13104584d on 16/11/2016.
  */
-package com.example;
 import java.io.*;
 import java.math.*;
-public class BloomFilter {
+public class main13104584 {
     private String[] lines;
     private int size;
     private int [] result;
@@ -14,7 +13,6 @@ public class BloomFilter {
 
     public static void main(String [] args){
         int size = Integer.parseInt(args[0]);
-        System.out.println(size);
         String documentName = args[1];
         String testName = args[2];
         int i = 0;
@@ -37,7 +35,7 @@ public class BloomFilter {
             }
             fileIn.close();
             fileIn2.close();
-            BloomFilter BloomFilter = new BloomFilter(lines, size);
+            main13104584 BloomFilter = new main13104584(lines, size);
             BloomFilter.add();
             for(int k = 0; k < tests.length; k++){
                 System.out.println(BloomFilter.lookUp(tests[k]));
@@ -47,7 +45,7 @@ public class BloomFilter {
         }
     }
 
-    public BloomFilter(String[] lines, int size){
+    public main13104584(String[] lines, int size){
         this.lines = lines;
         this.size = size;
         this.result = new int [size];
@@ -90,10 +88,10 @@ public class BloomFilter {
             hash = hash*(PRIME32);
             hash = hash^b;
         }
-        long temp =  hash % this.size;
-        if(temp < 0)
-            temp += this.size;
-        return temp;
+        long fnv1Result =  hash % this.size;
+        if(fnv1Result < 0)
+            fnv1Result += this.size;
+        return fnv1Result;
     }
 
     public long hash(String string){
@@ -102,7 +100,10 @@ public class BloomFilter {
             temp += Math.pow((string.charAt(i) - 96), 2) * Math.pow(2, 2 + 3*i);
             //System.out.println(temp);
         }
-        return (temp % this.size);
+        long hashResult = temp % this.size;
+        if(hashResult < 0)
+            hashResult += this.size;
+        return hashResult;
     }
 
 
