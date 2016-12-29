@@ -10,11 +10,11 @@
 ; member? takes an element (that is an atom) and a list and returns true if the element
 ;           is in the list
 (define member?
-  (lambda (a liss)
+  (lambda (a lis)
     (cond 
-      ((null? liss) #f)
-      ((eq? a (car liss)) #t)
-      (else (member? a (cdr liss))))))
+      ((null? lis) #f)
+      ((eq? a (car lis)) #t)
+      (else (member? a (cdr lis))))))
 
 ; factorial of a number
 (define factorial
