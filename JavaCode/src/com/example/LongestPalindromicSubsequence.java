@@ -40,12 +40,12 @@ public class LongestPalindromicSubsequence {
             System.out.println("");
         }
     }
-
+/*
     public static void main(String arg[]){
         String strA = "BBABCBABA";
         LongestPalindromicSubsequence i = new LongestPalindromicSubsequence();
         int x = i.findPalindrome(strA);
         System.out.println("Length of Longest Palindrome in '" + strA + "' is- " + x);
-    }
+    }*/
 }
 

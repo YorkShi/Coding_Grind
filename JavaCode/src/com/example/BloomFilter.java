@@ -12,7 +12,7 @@ public class BloomFilter {
     private static final long INIT32  = Long.parseLong("811c9dc5", 16);
     private static final long PRIME32 = Long.parseLong("01000193", 16);
 
-    public static void main(String [] args){
+    /*public static void main(String [] args){
         int size = Integer.parseInt(args[0]);
         System.out.println(size);
         String documentName = args[1];
@@ -45,7 +45,7 @@ public class BloomFilter {
         }catch (IOException e){
             e.printStackTrace();
         }
-    }
+    }*/
 
     public BloomFilter(String[] lines, int size){
         this.lines = lines;
