@@ -1,12 +1,12 @@
 package com.example;
-
+import java.
 /**
  * Created by Isaac on 1/4/17.
  * aaaa -> 4xa, abbbc -> a3xbc, 4444cb -> 4x4cb
  */
 public class stringTrans {
     public static String encodeString(String str){
-        char temp = 42;
+        String temp = "";
         int count = 0;
         String result = "";
         for (int i = 0; i < str.length(); i++){
@@ -20,14 +20,13 @@ public class stringTrans {
             }
 
             //taverse the string
-            if(str.charAt(i) != temp){
+            if(!String.valueOf(str.charAt(i)).equals(temp)){
                 if(count == 0){
-                    result = result + temp;
+                    result += temp;
                 }else{
-                    result = result + ++count + "x" + temp;
+                    result += ++count + "x" + temp;
                 }
-                temp = str.charAt(i);
-                //System.out.println(count);
+                temp = String.valueOf(str.charAt(i));
                 count = 0;
             }
             else{
@@ -51,6 +50,6 @@ public class stringTrans {
     }
 
     public static void main(String [] args){
-            System.out.println(encodeString(""));
+            System.out.println(encodeString("aabbccc"));
     }
 }
