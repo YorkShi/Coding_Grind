@@ -86,9 +86,9 @@ public class stringTrans {
             return false;
         }
     }
-
-    public static void main(String [] args){
+//comment main class for next algorithm problem
+    /*public static void main(String [] args){
             System.out.println(encodeString("aabbccc"));
             System.out.println(decodeString("2xa2xbgfh3xcdfg"));
-    }
+    }*/
 }
