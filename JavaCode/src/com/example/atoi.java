@@ -14,12 +14,28 @@ public class atoi {
         if(str.length() < 1 || str == null)
             return result;
 
-        if(String.valueOf(str.charAt(0)) == "-")
+        if(String.valueOf(str.charAt(0)).equals("-"))
             sign = false;
 
+        //trim the string
+        str = str.trim();
 
+        //calculate the value
+        int i = 1;
+        while(str.length() > i && str.charAt(i) >= 1 && str.charAt(i) <= 9){
+            result = result*10 + str.charAt(i) - '0';
+            i++;
+        }
 
+        //integer max
+        if(result >= Integer.MAX_VALUE){
+            return  Integer.MAX_VALUE;
+        }
 
+        //integer min
+        if(result <= Integer.MIN_VALUE){
+            return  Integer.MIN_VALUE;
+        }
 
 
         //sign handling
