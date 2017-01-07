@@ -8,16 +8,16 @@ package com.example;
  * The median is (2 + 3)/2 = 2.5
  */
 public class medianTwoArrays {
-    public static void main(String [] args){
+    /*public static void main(String [] args){
         int[] num1 = {1,2};
         int[] num2 = {3,4};
         System.out.println(findMedian(num1, num2));
-    }
+    }*/
 
     public static float findMedian(int[] num1, int[] num2){
         float result = 0;
         int Length = num1.length + num2.length;
-        float[] mergedArray = new float[Length];
+        int[] mergedArray = new int[Length];
 
         int i = 0, j = 0;
         boolean state = true;
