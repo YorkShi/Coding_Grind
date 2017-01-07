@@ -9,8 +9,8 @@ package com.example;
  */
 public class medianTwoArrays {
     public static void main(String [] args){
-        int[] num1 = {1,3};
-        int[] num2 = {2};
+        int[] num1 = {1,2};
+        int[] num2 = {3,4};
         System.out.println(findMedian(num1, num2));
     }
 
@@ -20,8 +20,19 @@ public class medianTwoArrays {
         float[] mergedArray = new float[Length];
 
         int i = 0, j = 0;
+        boolean state = true;
 
-        while(i < num1.length && j < num2.length){
+        if(num1.length == 0){
+            mergedArray = num2;
+            state = false;
+        }
+
+        if(num2.length == 0){
+            mergedArray = num1;
+            state = false;
+        }
+
+        while(i < num1.length && j < num2.length && state){
             if(num1[i] <= num2[j]){
                 mergedArray[i+j] = num1[i];
                 i++;
@@ -34,10 +45,12 @@ public class medianTwoArrays {
             if(i == num1.length){
                 for(;j<num2.length;j++){
                     mergedArray[i+j] = num2[j];
+                    //System.out.println(mergedArray[i+j]);
                 }
             }else if(j == num2.length){
-                for(;i<num2.length;i++){
+                for(;i<num1.length;i++){
                     mergedArray[i+j] = num1[i];
+                    //System.out.println(mergedArray[i+j]);
                 }
             }
         }
@@ -50,7 +63,7 @@ public class medianTwoArrays {
         if(Length%2 == 0)
             result = (mergedArray[Length/2] + mergedArray[Length/2 -1])/2;
         else
-            result = mergedArray[(Length+1)/2];
+            result = mergedArray[(Length-1)/2];
 
         return result;
     }
