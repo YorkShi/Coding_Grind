@@ -11,7 +11,7 @@ public class atoi {
     public static int atoi(String str){
         int result = 0;
         boolean sign = true;
-        if(str.length() < 1 || str == null)
+        if(str.length() < 1 || str.equals(null))
             return result;
 
         if(String.valueOf(str.charAt(0)).equals("-"))
