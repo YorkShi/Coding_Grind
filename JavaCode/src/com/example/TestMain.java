@@ -11,4 +11,5 @@ public class TestMain {
             int nRows = 3;
             System.out.println(zigzag.convert(s,nRows));
         }
+
 }
