@@ -13,9 +13,12 @@ public class TestMain {
 
             //reverse Integer
             final int TEST_INT = 1534236469;
-            System.out.println(ReverseInteger.reverse(TEST_INT));
-            //System.out.println(Integer.MAX_VALUE);
+            //System.out.println(ReverseInteger.reverse(TEST_INT));
 
+            //Regular Expression Match
+            String TEST_STRING_1 = "aa";
+            String TEST_STRING_2 = "a*";
+            System.out.println(RegulaExpressionMatching.isMatch(TEST_STRING_1, TEST_STRING_2));
         }
 
 }
