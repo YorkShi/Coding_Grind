@@ -12,8 +12,9 @@ public class TestMain {
             //System.out.println(zigzag.convert(s,nRows));
 
             //reverse Integer
-            final int TEST_INT = -123;
+            final int TEST_INT = 1534236469;
             System.out.println(ReverseInteger.reverse(TEST_INT));
+            //System.out.println(Integer.MAX_VALUE);
 
         }
 

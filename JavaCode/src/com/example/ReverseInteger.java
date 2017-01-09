@@ -15,6 +15,8 @@ public class ReverseInteger {
         }
 
         while(x > 0){
+            if(x>2147483647/10)//(2^31-1)/10
+                return 0;
             int temp = x%10;
             result = result*10 + temp;
             x = x/10;
