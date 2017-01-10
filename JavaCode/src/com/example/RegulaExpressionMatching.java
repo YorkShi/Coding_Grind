@@ -16,6 +16,12 @@ public class RegulaExpressionMatching {
     public static boolean isMatch(String s, String p){
         boolean result = true;
 
+        //base case
+        if(s.length() == 0)
+            return p.length() == 0;
+
+        //main
+        if(p.length() == 1)
 
 
         return result;
