@@ -12,13 +12,13 @@ public class TestMain {
             //System.out.println(zigzag.convert(s,nRows));
 
             //reverse Integer
-            final int TEST_INT = 1534236469;
-            //System.out.println(ReverseInteger.reverse(TEST_INT));
+            final int RI_INT = 1534236469;
+            //System.out.println(ReverseInteger.reverse(RI_INT));
 
             //Regular Expression Match
-            String TEST_STRING_1 = "aa";
-            String TEST_STRING_2 = "a*";
-            System.out.println(RegulaExpressionMatching.isMatch(TEST_STRING_1, TEST_STRING_2));
+            String REM_STRING_1 = "aab";
+            String REM_STRING_2 = "c*a*b";
+            //System.out.println(RegulaExpressionMatching.isMatch(REM_STRING_1, REM_STRING_2));
         }
 
 }
