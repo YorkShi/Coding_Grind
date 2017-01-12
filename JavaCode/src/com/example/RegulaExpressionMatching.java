@@ -23,6 +23,7 @@ public class RegulaExpressionMatching {
         //main
         if(p.length() == 1){
             //something to be done by tmr
+            return isMatch(s.substring(1), p.substring(1));
         }
 
 
