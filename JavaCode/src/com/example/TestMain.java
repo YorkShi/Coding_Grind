@@ -19,6 +19,10 @@ public class TestMain {
             String REM_STRING_1 = "aab";
             String REM_STRING_2 = "c*a*b";
             //System.out.println(RegulaExpressionMatching.isMatch(REM_STRING_1, REM_STRING_2));
+
+            //most area test case
+            int[] MA_INT_ARRAY = {};
+            System.out.print(MostArea.maxArea(MA_INT_ARRAY));
         }
 
 }
