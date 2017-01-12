@@ -21,7 +21,7 @@ public class TestMain {
             //System.out.println(RegulaExpressionMatching.isMatch(REM_STRING_1, REM_STRING_2));
 
             //most area test case
-            int[] MA_INT_ARRAY = {};
+            int[] MA_INT_ARRAY = {1,2,4,3};
             System.out.print(MostArea.maxArea(MA_INT_ARRAY));
         }
 
