@@ -52,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestMain.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/TestMain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -62,14 +62,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MostArea.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MostArea.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/MostArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            <state relative-caret-position="330">
+              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
               <folding>
-                <element signature="e#130#131#0" expanded="true" />
-                <element signature="e#155#156#0" expanded="true" />
+                <element signature="e#195#204#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,8 +103,8 @@
         <option value="$PROJECT_DIR$/src/com/example/zigzag.java" />
         <option value="$PROJECT_DIR$/src/com/example/ReverseInteger.java" />
         <option value="$PROJECT_DIR$/src/com/example/RegulaExpressionMatching.java" />
-        <option value="$PROJECT_DIR$/src/com/example/MostArea.java" />
         <option value="$PROJECT_DIR$/src/com/example/TestMain.java" />
+        <option value="$PROJECT_DIR$/src/com/example/MostArea.java" />
       </list>
     </option>
   </component>
@@ -830,12 +829,12 @@
       <workItem from="1483523233137" duration="2915000" />
       <workItem from="1483718300127" duration="11437000" />
       <workItem from="1484059069721" duration="857000" />
-      <workItem from="1484236653881" duration="1634000" />
+      <workItem from="1484236653881" duration="2877000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36088000" />
+    <option name="totallyTimeSpent" value="37331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1182,22 +1181,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/MostArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="e#130#131#0" expanded="true" />
-            <element signature="e#155#156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/TestMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/MostArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="e#195#204#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
