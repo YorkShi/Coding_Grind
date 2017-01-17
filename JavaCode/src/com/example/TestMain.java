@@ -22,7 +22,11 @@ public class TestMain {
 
             //most area test case
             int[] MA_INT_ARRAY = {1,2,4,3};
-            System.out.print(MostArea.maxArea(MA_INT_ARRAY));
+            //System.out.print(MostArea.maxArea(MA_INT_ARRAY));
+
+            //integer to Roman test case
+            final int INTEGER2ROMAN_INT = 101;
+            System.out.println(Integer2Roman.intToRoman(INTEGER2ROMAN_INT));
         }
 
 }
