@@ -25,7 +25,7 @@ public class TestMain {
             //System.out.print(MostArea.maxArea(MA_INT_ARRAY));
 
             //integer to Roman test case
-            final int INTEGER2ROMAN_INT = 101;
+            final int INTEGER2ROMAN_INT = 1011;
             System.out.println(Integer2Roman.intToRoman(INTEGER2ROMAN_INT));
         }
 
