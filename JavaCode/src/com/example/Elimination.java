@@ -1,6 +1,5 @@
 package com.example;
 
-import java.net.Inet4Address;
 import java.util.ArrayList;
 
 /**
@@ -24,16 +23,27 @@ public class Elimination {
         //System.out.println(temp);
 
         while(temp.size() > 1){
-            for(int j = 0; j < temp.size(); j += 1){
+            int sth = 0;
+            if(n%2 == 0){
+                sth = n/2;
+            }else{
+                sth = n/2 + 1;
+            }
+            for(int j = 0; j < sth; j += 1){
                 temp.remove(j);
                 System.out.println(temp);
             }
-            System.out.println("--------");
-            for(int k = temp.size() - 1; k > 2; k -= 1){
-                System.out.println(temp);
+
+            if(temp.size() < 2){
+                break;
+            }
+            for(int k = temp.size() - 1; k > sth; k -= 2){
+
                 temp.remove(k);
                 System.out.println(temp);
             }
+            System.out.println("--------");
+
         }
 
         return (Integer) temp.get(0);
