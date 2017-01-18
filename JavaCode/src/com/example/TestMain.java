@@ -30,10 +30,10 @@ public class TestMain {
             //System.out.println(Integer2Roman.intToRoman(INTEGER2ROMAN_INT));
 
             //roman to Integer test case
-
-            final String ROMAN2INTEGER_STRING = "DCXXI";
-            System.out.println(Roman2Int.convert(ROMAN2INTEGER_STRING));
-            //System.out.println("1".length());
+            //leetcode test case passed by 3999/3999
+            final String ROMAN2INTEGER_STRING = "MCDLXXVI";
+            //System.out.println(Roman2Int.convert(ROMAN2INTEGER_STRING));
+            //System.out.println(ROMAN2INTEGER_STRING.substring(1));
         }
 
 }
