@@ -34,6 +34,11 @@ public class TestMain {
             final String ROMAN2INTEGER_STRING = "MCDLXXVI";
             //System.out.println(Roman2Int.convert(ROMAN2INTEGER_STRING));
             //System.out.println(ROMAN2INTEGER_STRING.substring(1));
+
+            //longest Common prefix problem
+            //
+            String[] LONGEST_COMMON_PREFIX_STRINGARRAY = {"abcedf","abce","abcefg","abc","ab"};
+            System.out.println(LongestCommonPrefix.lookup(LONGEST_COMMON_PREFIX_STRINGARRAY));
         }
 
 }
