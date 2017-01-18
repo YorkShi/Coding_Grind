@@ -17,6 +17,6 @@ public class LongestCommonPrefix {
             }
             i++;
         }
-        return temp;c
+        return temp;
     }
 }
