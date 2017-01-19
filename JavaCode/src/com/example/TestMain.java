@@ -41,7 +41,7 @@ public class TestMain {
             //System.out.println(LongestCommonPrefix.lookup(LONGEST_COMMON_PREFIX_STRINGARRAY));
 
             //elimination game from L to R and from R to L
-            final int ELIMINATION_INT = 10;
+            final int ELIMINATION_INT = 9;
             System.out.print(Elimination.lastRemain(ELIMINATION_INT));
         }
 
