@@ -52,9 +52,14 @@ public class TestMain {
                     {9,10,11,12},
                     {13,14,15,16}
             };
-            
-            System.out.println(MinimumPath.miniPath(TEST_INT_ARRAY));
+
+            final int[][] test = {{1}};
+
+            System.out.println(MinimumPath.miniPath(test));
         }
 
+        public static void log(Object str){
+            System.out.println(str);
+        }
 
 }
