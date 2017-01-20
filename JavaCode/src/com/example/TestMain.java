@@ -44,7 +44,17 @@ public class TestMain {
             //leetcode 2368/3377 test case passed
             //time limit exceeded for inout "5271"
             final int ELIMINATION_INT = 5271;
-            System.out.print(Elimination.lastRemain(ELIMINATION_INT));
+            //System.out.print(Elimination.lastRemain(ELIMINATION_INT));
+
+            final int[][] TEST_INT_ARRAY = {
+                    {1,2,3,4},
+                    {5,6,7,8},
+                    {9,10,11,12},
+                    {13,14,15,16}
+            };
+            
+            System.out.println(MinimumPath.miniPath(TEST_INT_ARRAY));
         }
+
 
 }
