@@ -41,7 +41,9 @@ public class TestMain {
             //System.out.println(LongestCommonPrefix.lookup(LONGEST_COMMON_PREFIX_STRINGARRAY));
 
             //elimination game from L to R and from R to L
-            final int ELIMINATION_INT = 9;
+            //leetcode 2368/3377 test case passed
+            //time limit exceeded for inout "5271"
+            final int ELIMINATION_INT = 5271;
             System.out.print(Elimination.lastRemain(ELIMINATION_INT));
         }
 

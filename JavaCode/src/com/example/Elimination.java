@@ -13,7 +13,7 @@ public class Elimination {
 
         if(n == 1)
             return 1;
-/*
+
         ArrayList temp = new ArrayList();
 
         for(int i = 1; i < n + 1; i++){
@@ -23,35 +23,27 @@ public class Elimination {
         //System.out.println(temp);
 
         while(temp.size() > 1){
-            int sth = 0;
-            if(n%2 == 0){
-                sth = n/2;
-            }else{
-                sth = n/2 + 1;
-            }
+            int sth = (temp.size() + 1) / 2;
+
             for(int j = 0; j < sth; j += 1){
                 temp.remove(j);
-                System.out.println(temp);
+                //System.out.println(temp);
             }
-
+            //System.out.println("--------");
             if(temp.size() < 2){
                 break;
             }
-            for(int k = temp.size() - 1; k > sth; k -= 2){
 
-                temp.remove(k);
-                System.out.println(temp);
+            for(int k = temp.size(); 0 < k; k -= 2){
+                //
+                temp.remove(k - 1);
+                //System.out.println(temp);
             }
-            System.out.println("--------");
+            //System.out.println("--------");
 
         }
 
         return (Integer) temp.get(0);
-*/
-        if(n%2 == 0){
-            return n/2 + 1;
-        }else{
-            return (n + 1)/2 -1;
-        }
+
     }
 }
