@@ -59,7 +59,12 @@ public class TestMain {
             //Longest absolute file path problem
             String LONGEST_PATH_STRING = "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t" +
                     "\tfile2.ext";
-            log(LongestFilePath.longestLengthPath(LONGEST_PATH_STRING));
+            //log(LongestFilePath.longestLengthPath(LONGEST_PATH_STRING));
+
+            int[] A = {1,2,3,4,5,6,7,8,9,10,11,12,15,18,20};
+            int n = A.length;
+            int key = 2;
+            log(BinarySearch.binarySearch(A,n,key));
         }
 
         static void log(Object str){
