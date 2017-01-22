@@ -40,12 +40,11 @@ public class TestMain {
             String[] LONGEST_COMMON_PREFIX_STRINGARRAY = {"abcedf","abce","abcefg","abc","ab"};
             //System.out.println(LongestCommonPrefix.lookup(LONGEST_COMMON_PREFIX_STRINGARRAY));
 
-            //elimination game from L to R and from R to L
+            //Elimination game from L to R and from R to L
             //leetcode 2368/3377 test case passed
             //time limit exceeded for inout "5271"
             final int ELIMINATION_INT = 5271;
             //System.out.print(Elimination.lastRemain(ELIMINATION_INT));
-
             final int[][] TEST_INT_ARRAY = {
                     {1,2,3,4},
                     {5,6,7,8},
@@ -55,7 +54,12 @@ public class TestMain {
 
             final int[][] test = {{1}};
 
-            System.out.println(MinimumPath.miniPath(test));
+            //System.out.println(MinimumPath.miniPath(test));
+
+            //Longest absolute file path problem
+            String LONGEST_PATH_STRING = "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t" +
+                    "\tfile2.ext";
+            log(LongestFilePath.longestLengthPath(LONGEST_PATH_STRING));
         }
 
         public static void log(Object str){
