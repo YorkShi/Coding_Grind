@@ -10,7 +10,27 @@ import java.util.Stack;
  */
 public class LongestFilePath {
     public static int longestLengthPath(String str){
-        Stack<String> container = new Stack<>();
-        String[] str1 = str.split("/n");
+        Stack<Integer> container = new Stack<>();
+        String[] str1 = str.split("\n");
+        int result = 0;
+        int currentLong = 0;
+        //TestMain.log(str1[0]);
+        for(String s:str1){
+            int length = s.length() - s.replaceAll("\t","").length();
+
+            while(container.size() > length){
+                currentLong -= container.pop();
+            }
+
+            int len = s.replaceAll("\t", "").length() + 1;
+            currentLong += len;
+
+            if(s.contains(".")){
+                result = currentLong - 1 > result ? currentLong - 1 : result;
+            }
+            container.push(len);
+        }
+
+        return result;
     }
 }

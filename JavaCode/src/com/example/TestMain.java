@@ -62,7 +62,7 @@ public class TestMain {
             log(LongestFilePath.longestLengthPath(LONGEST_PATH_STRING));
         }
 
-        public static void log(Object str){
+        static void log(Object str){
             System.out.println(str);
         }
 
