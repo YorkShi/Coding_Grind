@@ -61,10 +61,17 @@ public class TestMain {
                     "\tfile2.ext";
             //log(LongestFilePath.longestLengthPath(LONGEST_PATH_STRING));
 
+            //practice on binarysearch
             int[] A = {1,2,3,4,5,6,7,8,9,10,11,12,15,18,20};
             int n = A.length;
             int key = 2;
-            log(BinarySearch.binarySearch(A,n,key));
+            //log(BinarySearch.binarySearch(A,n,key));
+
+            //practice on binarysort
+            int[] nums = {0,1,1,1,1,0,0,1,0,1,0,1,0,0,0,1,0,1};
+            for(int est:BinarySort.binarySort(nums))
+                System.out.print(est + ",");
+
         }
 
         static void log(Object str){
