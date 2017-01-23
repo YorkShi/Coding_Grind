@@ -1,5 +1,5 @@
 package com.example;
-
+import java.util.*;
 /**
  * Created by Isaac on 1/4/17.
  */
@@ -69,9 +69,22 @@ public class TestMain {
 
             //practice on binarysort
             int[] nums = {0,1,1,1,1,0,0,1,0,1,0,1,0,0,0,1,0,1};
-            for(int est:BinarySort.binarySort(nums))
-                System.out.print(est + ",");
+            //for(int est:BinarySort.binarySort(nums))
+            //    System.out.print(est + ",");
 
+            //practice on mergesort
+            List<Integer> nums1 = new ArrayList<>();
+            {
+                nums1.add(4);
+                nums1.add(1);
+                nums1.add(2);
+                nums1.add(11);
+                nums1.add(7);
+                nums1.add(8);
+            }
+            for(Integer merge_s:MergeSort.mergeSort(nums1)){
+                log(merge_s);
+            }
         }
 
         static void log(Object str){
