@@ -87,7 +87,7 @@ public class TestMain {
             }
 
             //UTF8 validation test case
-            int[] data = {235,140,4};
+            final int[] UTF8_DATA = {235,140,4};
             System.out.println(UTF8Verify.verify(data));
         }
 
