@@ -82,9 +82,13 @@ public class TestMain {
                 nums1.add(7);
                 nums1.add(8);
             }
-            for(Integer merge_s:MergeSort.mergeSort(nums1)){
+            for(Integer merge_s:MergeSort.mergeSort(nums1)) {
                 log(merge_s);
             }
+
+            //UTF8 validation test case
+            int[] data = {235,140,4};
+            System.out.println(UTF8Verify.verify(data));
         }
 
         static void log(Object str){
