@@ -1,4 +1,6 @@
 package com.example;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 /**
  * Created by Isaac on 2/2/17.
@@ -7,7 +9,14 @@ import java.util.List;
  * Find all unique triplets in the array which gives the sum of zero.
  */
 public class ThreeSum {
-    public List<List<Integer>> threeSum(int[] nums) {
+    public static List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        Arrays.sort(nums);
 
+        for(int i = 0; i < nums.length - 2; i++){
+            //while(true);
+        }
+
+        return result;
     }
 }

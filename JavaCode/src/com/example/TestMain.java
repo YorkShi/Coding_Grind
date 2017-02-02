@@ -4,7 +4,7 @@ import java.util.*;
  * Created by Isaac on 1/4/17.
  */
 public class TestMain {
-        public static void main(String[] args){
+        public static void main(String[] args) {
 
             //zig zag conversion test case
             String s = "PAYPALISHIRING";
@@ -21,7 +21,7 @@ public class TestMain {
             //System.out.println(RegulaExpressionMatching.isMatch(REM_STRING_1, REM_STRING_2));
 
             //most area test case
-            int[] MA_INT_ARRAY = {1,2,4,3};
+            int[] MA_INT_ARRAY = {1, 2, 4, 3};
             //System.out.print(MostArea.maxArea(MA_INT_ARRAY));
 
             //integer to Roman test case
@@ -37,7 +37,7 @@ public class TestMain {
 
             //longest Common prefix problem
             //
-            String[] LONGEST_COMMON_PREFIX_STRINGARRAY = {"abcedf","abce","abcefg","abc","ab"};
+            String[] LONGEST_COMMON_PREFIX_STRINGARRAY = {"abcedf", "abce", "abcefg", "abc", "ab"};
             //System.out.println(LongestCommonPrefix.lookup(LONGEST_COMMON_PREFIX_STRINGARRAY));
 
             //Elimination game from L to R and from R to L
@@ -46,10 +46,10 @@ public class TestMain {
             final int ELIMINATION_INT = 5271;
             //System.out.print(Elimination.lastRemain(ELIMINATION_INT));
             final int[][] TEST_INT_ARRAY = {
-                    {1,2,3,4},
-                    {5,6,7,8},
-                    {9,10,11,12},
-                    {13,14,15,16}
+                    {1, 2, 3, 4},
+                    {5, 6, 7, 8},
+                    {9, 10, 11, 12},
+                    {13, 14, 15, 16}
             };
 
             final int[][] test = {{1}};
@@ -62,13 +62,13 @@ public class TestMain {
             //log(LongestFilePath.longestLengthPath(LONGEST_PATH_STRING));
 
             //practice on binarysearch
-            int[] A = {1,2,3,4,5,6,7,8,9,10,11,12,15,18,20};
+            int[] A = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 18, 20};
             int n = A.length;
             int key = 2;
             //log(BinarySearch.binarySearch(A,n,key));
 
             //practice on binarysort
-            int[] nums = {0,1,1,1,1,0,0,1,0,1,0,1,0,0,0,1,0,1};
+            int[] nums = {0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1};
             //for(int est:BinarySort.binarySort(nums))
             //    System.out.print(est + ",");
 
@@ -82,14 +82,18 @@ public class TestMain {
                 nums1.add(7);
                 nums1.add(8);
             }
-            for(Integer merge_s:MergeSort.mergeSort(nums1)) {
-                log(merge_s);
-            }
+            //for (Integer merge_s : MergeSort.mergeSort(nums1)) {
+            //    log(merge_s);
+            //}
 
             //UTF8 validation test case
-            final int[] UTF8_DATA = {235,140,4};
-            System.out.println(UTF8Verify.verify(UTF8_DATA));
+            final int[] UTF8_DATA = {235, 140, 4};
+            //System.out.println(UTF8Verify.verify(UTF8_DATA));
+            //Two suM TEST CASE
 
+            int[] TWO_SUM_INT_ARRAY = {1,2,7,8};
+            final int TWO_SUM_TARGET = 9;
+            System.out.println(Arrays.toString(TwoSum.TwoSum(TWO_SUM_INT_ARRAY,TWO_SUM_TARGET)));
             //3Sum test case
             //For example, given array S = [-1, 0, 1, 2, -1, -4],
 
@@ -100,7 +104,10 @@ public class TestMain {
             //]
             //}
 
-            int[] THREE_SUM_INT_ARRAY =
+            int[] THREE_SUM_INT_ARRAY = {-1, 0, 1, 2, -1, -4};
+            //System.out.println(ThreeSum.threeSum(THREE_SUM_INT_ARRAY));
+
+        }
 
         static void log(Object str){
             System.out.println(str);
