@@ -88,8 +88,19 @@ public class TestMain {
 
             //UTF8 validation test case
             final int[] UTF8_DATA = {235,140,4};
-            System.out.println(UTF8Verify.verify(data));
-        }
+            System.out.println(UTF8Verify.verify(UTF8_DATA));
+
+            //3Sum test case
+            //For example, given array S = [-1, 0, 1, 2, -1, -4],
+
+            //A solution set is:
+            //[
+            //[-1, 0, 1],
+            //[-1, -1, 2]
+            //]
+            //}
+
+            int[] THREE_SUM_INT_ARRAY =
 
         static void log(Object str){
             System.out.println(str);
