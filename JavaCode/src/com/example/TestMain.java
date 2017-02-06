@@ -1,4 +1,6 @@
 package com.example;
+import apple.laf.JRSUIUtils;
+
 import java.util.*;
 /**
  * Created by Isaac on 1/4/17.
@@ -124,6 +126,14 @@ public class TestMain {
 
             //--------------------------------------------------------------//
             //binary tree
+            TreeNode d1 = new TreeNode(41);
+            TreeNode c1 = new TreeNode(31);
+            TreeNode c2 = new TreeNode(32, d1, true);
+            TreeNode c3 = new TreeNode(33);
+            TreeNode c4 = new TreeNode(34, null, null);
+            TreeNode b1 = new TreeNode(21,c1,c2);
+            TreeNode b2 = new TreeNode(22,c3,c4);
+            TreeNode a1 = new TreeNode(11,b1,b2);
 
         }
 
