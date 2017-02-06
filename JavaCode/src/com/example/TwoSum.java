@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class TwoSum {
     public static int[] TwoSum(int[] nums, int target){
-        int[] result = new int[2];
+        //int[] result = new int[2];
         int lo = 0, hi = nums.length - 1;
         Arrays.sort(nums);
         while(lo < hi){
