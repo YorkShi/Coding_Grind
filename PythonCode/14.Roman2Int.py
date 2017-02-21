@@ -1,3 +1,1 @@
-class Roman2Int:
-
-    def __init__(self, )
+def ro2int()
