@@ -109,7 +109,7 @@ public class TestMain {
 
             int[] TWO_SUM_INT_ARRAY = {1,2,7,8};
             final int TWO_SUM_TARGET = 9;
-            System.out.println(Arrays.toString(TwoSum.TwoSum(TWO_SUM_INT_ARRAY,TWO_SUM_TARGET)));
+            //System.out.println(Arrays.toString(TwoSum.TwoSum(TWO_SUM_INT_ARRAY,TWO_SUM_TARGET)));
             //--------------------------------------------------------------//
             //3Sum test case
             //For example, given array S = [-1, 0, 1, 2, -1, -4],
@@ -126,18 +126,31 @@ public class TestMain {
 
             //--------------------------------------------------------------//
             //binary tree
-            TreeNode d1 = new TreeNode(41);
+            /*TreeNode d1 = new TreeNode(41);
             TreeNode c1 = new TreeNode(31);
             TreeNode c2 = new TreeNode(32, d1, true);
             TreeNode c3 = new TreeNode(33);
             TreeNode c4 = new TreeNode(34, null, null);
             TreeNode b1 = new TreeNode(21,c1,c2);
             TreeNode b2 = new TreeNode(22,c3,c4);
-            TreeNode a1 = new TreeNode(11,b1,b2);
+            TreeNode a1 = new TreeNode(11,b1,b2);*/
+            char c = 65504;
+            char c1 = 65504;
+            //System.out.println("c = "+c);
+            char[] data = new char[1000];
+            Arrays.fill(data, 'a');
+            String tmp = new String(data);
+            //String tmp = "";
+            byte[] tmp1 = tmp.getBytes();
+            log(tmp1.length);
 
         }
 
-        static void log(Object str){
+    /**
+     *
+     * @param str string to be printed out
+     */
+    static void log(Object str){
             System.out.println(str);
         }
 

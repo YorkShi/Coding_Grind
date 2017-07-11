@@ -52,7 +52,7 @@ public class TreeNode {
     }
 
     public TreeNode lookUp(int target){
-
+        return null;
     }
 
     public void insert(int target){
