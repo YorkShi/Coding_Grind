@@ -10,9 +10,9 @@ public class TestMain {
             //this is the so-called software design principle
             //--------------------------------------------------------------//
             //zig zag conversion test case
-            String s = "PAYPALISHIRING";
+            String zigzag_s = "PAYPALISHIRING";
             int nRows = 3;
-            //System.out.println(zigzag.convert(s,nRows));
+            //System.out.println(zigzag.convert(zigzag_s,nRows));
             //--------------------------------------------------------------//
 
             //reverse Integer
@@ -122,7 +122,7 @@ public class TestMain {
             //}
             //--------------------------------------------------------------//
             int[] THREE_SUM_INT_ARRAY = {-1, 0, 1, 2, -1, -4};
-            //System.out.println(ThreeSum.threeSum(THREE_SUM_INT_ARRAY));
+            System.out.println(ThreeSum.threeSum(THREE_SUM_INT_ARRAY));
 
             //--------------------------------------------------------------//
             //binary tree
@@ -134,15 +134,18 @@ public class TestMain {
             TreeNode b1 = new TreeNode(21,c1,c2);
             TreeNode b2 = new TreeNode(22,c3,c4);
             TreeNode a1 = new TreeNode(11,b1,b2);*/
-            char c = 65504;
-            char c1 = 65504;
+            //char c = 65504;
+            //char c1 = 65504;
             //System.out.println("c = "+c);
-            char[] data = new char[1000];
-            Arrays.fill(data, 'a');
-            String tmp = new String(data);
+            //char[] data = new char[1000];
+            //Arrays.fill(data, 'a');
+            //String tmp = new String(data);
             //String tmp = "";
-            byte[] tmp1 = tmp.getBytes();
-            log(tmp1.length);
+            //byte[] tmp1 = tmp.getBytes();
+            //log(tmp1.length);
+
+
+
 
         }
 

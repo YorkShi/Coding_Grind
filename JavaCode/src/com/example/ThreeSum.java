@@ -13,8 +13,25 @@ public class ThreeSum {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
 
-        for(int i = 0; i < nums.length - 2; i++){
-            //while(true);
+        //border case
+        if(nums.length <= 2 || nums[0] + nums[1] >= 0)
+            return result;
+        int i, j, k;
+        for(i = 0; i < nums.length - 2; i++){
+            for(j = 1; j < nums.length - 1; j++){
+                for(k = 2; k < nums.length ; k++){
+                    if(nums[i] + nums[j] + nums[k] == 0){
+                        int a = i, b = j, c = k;
+                        //System.out.println(Arrays.toString(nums));
+                        List<Integer> temp = new ArrayList<Integer>() {{
+                            add(nums[a]);
+                            add(nums[b]);
+                            add(nums[c]);
+                        }};
+                        result.add(temp);
+                    }
+                }
+            }
         }
 
         return result;
