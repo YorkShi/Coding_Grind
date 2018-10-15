@@ -29,7 +29,6 @@ public class LongestPalindromicSubsequence {
         }
         printMatrix(LP);
         return LP[0][LP.length-1];
-
     }
 
     public void printMatrix(int [][] LP){
@@ -37,7 +36,7 @@ public class LongestPalindromicSubsequence {
             for(int j=0;j<LP.length;j++){
                 System.out.print("  " + LP[i][j]);
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 /*

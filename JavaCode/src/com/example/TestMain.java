@@ -122,7 +122,7 @@ public class TestMain {
             //}
             //--------------------------------------------------------------//
             int[] THREE_SUM_INT_ARRAY = {-1, 0, 1, 2, -1, -4};
-            System.out.println(ThreeSum.threeSum(THREE_SUM_INT_ARRAY));
+            //System.out.println(ThreeSum.threeSum(THREE_SUM_INT_ARRAY));
 
             //--------------------------------------------------------------//
             //binary tree
@@ -144,8 +144,17 @@ public class TestMain {
             //byte[] tmp1 = tmp.getBytes();
             //log(tmp1.length);
 
+            //---------------------------------------------------------------//
+            //Sub array min max - facebook 2019 summer intern 高频
+            int[] SUB_ARRAY_MIN_MAX = new int[]{2, 4, 5, 7};
+            //System.out.println(SubarrayMaxMin.subarrayMaxMin(SUB_ARRAY_MIN_MAX, 10));
 
-
+            //---------------------------------------------------------------//
+            //word break leetcode 139
+            String str139 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
+                    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
+            List<String> wordDict = Arrays.asList(new String[]{"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"});
+            System.out.println(WordBreak.wordBreak2(str139, wordDict));
 
         }
 

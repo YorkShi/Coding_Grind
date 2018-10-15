@@ -17,11 +17,11 @@ public class zigzag {
                 result[temp - tuple + numRows - 1] += s.charAt(i);
             }
         }
-        String output = "";
+        StringBuilder output = new StringBuilder();
         for(int j = 0; j < result.length; j++) {
             System.out.println(result[j]);
-            output += result[j];
+            output.append(result[j]);
         }
-        return output;
+        return output.toString();
     }
 }

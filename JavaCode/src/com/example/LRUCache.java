@@ -53,14 +53,14 @@ public class LRUCache {
 
     }
 
-//    public void removeFromTail(){
-//        node tmp = tail.pre;
-//        tail.pre.pre.next = tail.pre;
-//        tail.pre = tail.pre.pre;
-//
-//        this.map.remove(tmp.key);
-//
-//    }
+    public void removeFromTail(){
+        node tmp = tail.pre;
+        tail.pre.pre.next = tail.pre;
+        tail.pre = tail.pre.pre;
+
+        this.map.remove(tmp.key);
+
+    }
 
     public int get(int key) {
         if(this.map.containsKey(key)){
