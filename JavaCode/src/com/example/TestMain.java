@@ -154,8 +154,22 @@ public class TestMain {
             String str139 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
                     "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
             List<String> wordDict = Arrays.asList(new String[]{"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"});
-            System.out.println(WordBreak.wordBreak2(str139, wordDict));
+            //System.out.println(WordBreak.wordBreak2(str139, wordDict));
 
+            //---------------------------------------------------------------//
+            //leetcode 127 word ladder
+            String beginWord = "hit";
+            String endWord = "cog";
+            List<String> wordList = Arrays.asList(new String[]{"hot","dot","dog","lot","log","cog"});
+            //System.out.println(LadderLength.ladderLength(beginWord, endWord, wordList));
+
+            //----------------------------------------------------------------//
+            //VMware summer OA last question
+            String lc125 = "cbac";
+            int[] arr1 = {0,2,1};
+            int[] arr2 = {3,3,3};
+            int[] arr3 = {0,2,2};
+            System.out.println(Palindrome.makePalindrome(lc125, arr1, arr2, arr3));
         }
 
     /**
